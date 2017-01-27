@@ -29,11 +29,12 @@ $(document).ready(function() {
   $(".topping").click(function() {
     var topping = this.textContent;
     toppings.push(topping);
-    $("#results").empty().text(toppings);
+    $("#showToppings").append("<li>" + topping + "</li>");
   });
   $(".size").click(function() {
     var diameter = this.textContent;
     size = diameter;
+    $("#showSize").empty().text(size);
     var user = new Order(toppings, size);
     console.log(user.price());
   });

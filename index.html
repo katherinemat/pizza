@@ -10,21 +10,18 @@
   <body>
     <div class="container">
       <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-4">
           <h3>Select all toppings you want to add</h3>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-4">
           <h3>Choose size of pie</h3>
         </div>
-        <div class="col-md-3">
-          <h3>Any special requests?</h3>
-        </div>
-        <div class="col-md-3">
+        <div class="col-md-4">
           <h3>Look good?</h3>
         </div>
       </div>
       <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-4">
           <p class="topping clickable">Bell Pepper</p>
           <p class="topping clickable">Tomato</p>
           <p class="topping clickable">Mushroooms</p>
@@ -39,14 +36,19 @@
           <p class="topping clickable">Pepperoni</p>
           <p class="topping clickable">Sausage</p>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-4">
           <p class="size clickable">Small 10"</p>
           <p class="size clickable">Medium 12"</p>
           <p class="size clickable">Large 14"</p>
           <p class="size clickable">Extra-Large 16"</p>
         </div>
+        <div class="col-md-4">
+          <h4>Toppings:</h4>
+          <ul id="showToppings">
+          </ul>
+          <h4>Size: <span id="showSize"></span></h4>
+        </div>
       </div>
-      <p id="results"></p>
     </div>
   </body>
 </html>
