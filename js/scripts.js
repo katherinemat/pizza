@@ -40,6 +40,7 @@ $(document).ready(function() {
       var toppingsString = toppings.join(" ");
     }
     $("#showToppings").empty().text(toppingsString);
+    $(".results").show();
   });
   $(".size").click(function() {
     var diameter = this.textContent;
@@ -48,6 +49,7 @@ $(document).ready(function() {
     var user = new Order(toppings, size);
     console.log(user);
     $("#showPrice").empty().text(user.price());
+    $("#size, #price").show();
   });
 
 });
