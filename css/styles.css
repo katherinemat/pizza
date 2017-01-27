@@ -8,11 +8,3 @@
 .results, .chooseToppings, #toppings, #price, footer {
   display: none;
 }
-
-footer {
-  position: fixed;
-  height: 200px;
-  bottom: 0;
-  width: 100%;
-  border: 1px solid black;
-}

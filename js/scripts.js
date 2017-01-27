@@ -37,16 +37,6 @@ var toppings = [];
 var size = "";
 var user;
 
-// var toppingsDisplay = function(arrayOfToppings) {
-//   var toppingsString = "";
-//   if (arrayOfToppings.length > 1) {
-//     toppingsString = toppings.join(", ");
-//   } else {
-//     toppingsString = toppings.join(" ");
-//   }
-//   return toppingsString;
-// }
-
 $(document).ready(function() {
   $(".size").click(function() {
     var diameter = this.textContent;
@@ -82,7 +72,9 @@ $(document).ready(function() {
     $("footer").show();
     for (k = 0; k < orders.length; k++) {
       var eachToppings = (orders[k].toppingsDisplay());
+      var eachSize = orders[k].size;
+      var eachPrice = orders[k].price();
     }
-    $(".multipleOrders").append(eachToppings);
+    $(".multipleOrders").append("<li>" + eachSize + " pie with " + eachToppings + " for " + eachPrice + " dollars. </li>");
   });
 });
