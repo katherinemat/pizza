@@ -37,5 +37,6 @@ $(document).ready(function() {
     $("#showSize").empty().text(size);
     var user = new Order(toppings, size);
     console.log(user.price());
+    $("#showPrice").empty().text(user.price());
   });
 });
