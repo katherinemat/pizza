@@ -26,6 +26,17 @@ var toppings = [];
 var size = "";
 
 $(document).ready(function() {
+  $(".size").click(function() {
+    var diameter = this.textContent;
+    size = diameter;
+    if (toppings.length > 0) {
+      user = new Order(toppings, size);
+      $("#showPrice").empty().text(user.price());
+    }
+    $("#showSize").empty().text(size);
+    $(".results").show();
+    $(".chooseToppings").show();
+  });
   $(".topping").click(function() {
     var topping = this.textContent;
     if (toppings.indexOf(topping) === -1) {
@@ -40,16 +51,10 @@ $(document).ready(function() {
       var toppingsString = toppings.join(" ");
     }
     $("#showToppings").empty().text(toppingsString);
-    $(".results").show();
-  });
-  $(".size").click(function() {
-    var diameter = this.textContent;
-    size = diameter;
-    $("#showSize").empty().text(size);
     var user = new Order(toppings, size);
     console.log(user);
     $("#showPrice").empty().text(user.price());
-    $("#size, #price").show();
+    $("#toppings, #price").show();
   });
 
 });
