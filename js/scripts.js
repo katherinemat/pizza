@@ -28,15 +28,19 @@ var size = "";
 $(document).ready(function() {
   $(".topping").click(function() {
     var topping = this.textContent;
-    toppings.push(topping);
-    $("#showToppings").append("<li>" + topping + "</li>");
+    if (toppings.indexOf(topping) === -1) {
+      toppings.push(topping);
+      $("#showToppings").append("<li>" + topping + "</li>");
+    }
+    console.log(toppings);
   });
   $(".size").click(function() {
     var diameter = this.textContent;
     size = diameter;
     $("#showSize").empty().text(size);
     var user = new Order(toppings, size);
-    console.log(user.price());
+    console.log(user);
     $("#showPrice").empty().text(user.price());
   });
+
 });
