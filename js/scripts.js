@@ -22,8 +22,20 @@ Order.prototype.price = function() {
   return pizzaPrice;
 }
 
+var orders = [];
 var toppings = [];
 var size = "";
+var user;
+
+var toppingsDisplay = function(arrayOfToppings) {
+  var toppingsString = "";
+  if (toppings.length > 1) {
+    toppingsString = toppings.join(", ");
+  } else {
+    toppingsString = toppings.join(" ");
+  }
+  return toppingsString;
+}
 
 $(document).ready(function() {
   $(".size").click(function() {
@@ -45,16 +57,17 @@ $(document).ready(function() {
       var repeatIndex = toppings.indexOf(topping);
       toppings.splice(repeatIndex, 1);
     }
-    if (toppings.length > 1) {
-      var toppingsString = toppings.join(", ");
-    } else {
-      var toppingsString = toppings.join(" ");
-    }
-    $("#showToppings").empty().text(toppingsString);
-    var user = new Order(toppings, size);
-    console.log(user);
+    var displayToppings = toppingsDisplay(toppings);
+    $("#showToppings").empty().text(displayToppings);
+    user = new Order(toppings, size);
     $("#showPrice").empty().text(user.price());
     $("#toppings, #price").show();
   });
-
+  $("#add").click(function() {
+    orders.push(user);
+    user = "";
+    toppings = [];
+    size = "";
+    $(".results, .chooseToppings, #toppings, #price").hide();
+  })
 });
