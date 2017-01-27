@@ -30,9 +30,16 @@ $(document).ready(function() {
     var topping = this.textContent;
     if (toppings.indexOf(topping) === -1) {
       toppings.push(topping);
-      $("#showToppings").append("<li>" + topping + "</li>");
+    } else {
+      var repeatIndex = toppings.indexOf(topping);
+      toppings.splice(repeatIndex, 1);
     }
-    console.log(toppings);
+    if (toppings.length > 1) {
+      var toppingsString = toppings.join(", ");
+    } else {
+      var toppingsString = toppings.join(" ");
+    }
+    $("#showToppings").empty().text(toppingsString);
   });
   $(".size").click(function() {
     var diameter = this.textContent;
