@@ -70,11 +70,14 @@ $(document).ready(function() {
     size = "";
     $(".results, .chooseToppings, #toppings, #price").hide();
     $("footer").show();
+    var totalPrice = 0;
     for (k = 0; k < orders.length; k++) {
       var eachToppings = (orders[k].toppingsDisplay());
       var eachSize = orders[k].size;
       var eachPrice = orders[k].price();
+      totalPrice += eachPrice;
     }
     $(".multipleOrders").append("<li>" + eachSize + " pie with " + eachToppings + " for " + eachPrice + " dollars. </li>");
+    $("#totalPrice").empty().text(totalPrice);
   });
 });

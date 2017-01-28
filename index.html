@@ -9,6 +9,9 @@
   </head>
   <body>
     <div class="container">
+      <div class="jumbotron">
+        <h1>Pizza Pie</h1>
+      </div>
       <div class="row">
         <div class="col-md-4">
           <h3>First, choose size of pie</h3>
@@ -20,7 +23,7 @@
           <h3>Your pie:</h3>
         </div>
       </div>
-      <div class="row">
+      <div class="row" id="long">
         <div class="col-md-4">
           <p class="size clickable">Small 10"</p>
           <p class="size clickable">Medium 12"</p>
@@ -28,19 +31,19 @@
           <p class="size clickable">Extra-Large 16"</p>
         </div>
         <div class="col-md-4 chooseToppings">
-          <p class="topping clickable">Bell Pepper</p>
-          <p class="topping clickable">Tomato</p>
-          <p class="topping clickable">Mushroooms</p>
-          <p class="topping clickable">Spinach</p>
-          <p class="topping clickable">Basil</p>
-          <p class="topping clickable">Olives</p>
-          <p class="topping clickable">Pineapple</p>
-          <p class="topping clickable">Mozzarella</p>
-          <p class="topping clickable">Goat Cheese</p>
-          <p class="topping clickable">Feta</p>
-          <p class="topping clickable">Serrano Ham</p>
-          <p class="topping clickable">Pepperoni</p>
-          <p class="topping clickable">Sausage</p>
+          <p><span class="topping clickable">Bell Pepper</span><br>
+          <span class="topping clickable">Tomato</span><br>
+          <span class="topping clickable">Mushroooms</span><br>
+          <span class="topping clickable">Spinach</span><br>
+          <span class="topping clickable">Basil</span><br>
+          <span class="topping clickable">Olives</span><br>
+          <span class="topping clickable">Pineapple</span><br>
+          <span class="topping clickable">Mozzarella</span><br>
+          <span class="topping clickable">Goat Cheese</span><br>
+          <span class="topping clickable">Feta</span><br>
+          <span class="topping clickable">Serrano Ham</span><br>
+          <span class="topping clickable">Pepperoni</span><br>
+          <span class="topping clickable">Sausage</span></p>
         </div>
         <div class="col-md-4 results">
           <h4>Size: <span id="showSize"></span></h4>
@@ -53,9 +56,9 @@
       <footer class="navbar-fixed-bottom">
         <h1>Your order: </h1>
         <ol class="multipleOrders">
-
         </ol>
-        <button type="button" class="btn btn-info" id="submit">Submit Order</button>
+        <p class="totalPrice">Your total due is: $<span id="totalPrice"></span><br>
+        <button type="button" class="btn btn-info" id="submit footer">Submit Order</button></p>
       </footer>
     </div>
   </body>

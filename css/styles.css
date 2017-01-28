@@ -1,10 +1,22 @@
+body {
+  margin: 50px;
+}
+
 .clickable:hover {
   color: blue;
   font-size: 16px;
-  text-decoration: underline;
+  font-weight: bold;
   cursor: pointer;
 }
 
-.results, .chooseToppings, #toppings, #price, footer {
+.results, .chooseToppings, #toppings, #price, footer, .order-form {
   display: none;
+}
+
+.navbar-fixed-bottom {
+  margin: 50px;
+}
+
+.totalPrice {
+  text-align: center;
 }
