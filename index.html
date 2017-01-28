@@ -4,33 +4,34 @@
     <script src="js/jquery-3.1.1.js"></script>
     <script src="js/scripts.js"></script>
     <link href="../bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day|Gabriela" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <title>Pizza</title>
   </head>
   <body>
     <div class="container">
-      <div class="jumbotron">
-        <h1>Pizza Pie</h1>
-      </div>
+      <h1 id="header">Pizza Pie</h1>
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-3">
           <h3>First, choose size of pie</h3>
         </div>
-        <div class="col-md-4 chooseToppings">
+        <div class="col-md-3 chooseToppings">
           <h3>Select any and all toppings</h3>
         </div>
-        <div class="col-md-4 results">
+        <div class="col-md-3 results">
           <h3>Your pie:</h3>
+        </div>
+        <div class="col-md-3">
         </div>
       </div>
       <div class="row" id="long">
-        <div class="col-md-4">
+        <div class="col-md-3">
           <p class="size clickable">Small 10"</p>
           <p class="size clickable">Medium 12"</p>
           <p class="size clickable">Large 14"</p>
           <p class="size clickable">Extra-Large 16"</p>
         </div>
-        <div class="col-md-4 chooseToppings">
+        <div class="col-md-3 chooseToppings">
           <p><span class="topping clickable">Bell Pepper</span><br>
           <span class="topping clickable">Tomato</span><br>
           <span class="topping clickable">Mushroooms</span><br>
@@ -45,12 +46,14 @@
           <span class="topping clickable">Pepperoni</span><br>
           <span class="topping clickable">Sausage</span></p>
         </div>
-        <div class="col-md-4 results">
+        <div class="col-md-3 results">
           <h4>Size: <span id="showSize"></span></h4>
           <h4 id="toppings">Toppings: <span id="showToppings"></span></h4>
           <h4 id="price">Price: $<span id="showPrice"></span></h4>
-          <button type="button" class="btn btn-info" id="add">Save this pie and add another</button>
-          <button type="button" class="btn btn-info" id="submit">Submit Order</button>
+          <button type="button" class="btn btn-success" id="add">Save this pie and add another</button>
+          <button type="button" class="btn btn-success" id="submit">Submit Order</button>
+        </div>
+        <div class="col-md-3">
         </div>
       </div>
       <footer class="navbar-fixed-bottom">
@@ -58,7 +61,7 @@
         <ol class="multipleOrders">
         </ol>
         <p class="totalPrice">Your total due is: $<span id="totalPrice"></span><br>
-        <button type="button" class="btn btn-info" id="submit footer">Submit Order</button></p>
+        <button type="button" class="btn btn-success" id="submit footer">Submit Order</button></p>
       </footer>
     </div>
   </body>
