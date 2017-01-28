@@ -17,7 +17,7 @@ _At first, this webpage only displays sizing options for pizzas. After the user 
 
 ## Known Bugs
 
-_The submit buttons currently do not lead anywhere. If I had more time, I would hide everything on the page and replace it with a form asking for user's name, credit card information, etc. to complete the order. Also, I am unsure if I separated code correctly into business and front-end logic. Lines 73-79 for instance: should they remain inside of the click event listener? Could these lines of code be consolidated into a function? I think the answer is no because the function would need to return multiple values and functions can only return one value._
+_The submit buttons currently do not lead anywhere. If I had more time, I would hide everything on the page and replace it with a form asking for user's name, credit card information, etc. to complete the order. Another problem is that the list of toppings overflows into the footer and the user can't click the toppings that intersect with the footer. Also, I am unsure if I separated code correctly into business and front-end logic. Lines 73-79 for instance: should they remain inside of the click event listener? Could these lines of code be consolidated into a function? I think the answer is no because the function would need to return multiple values and functions can only return one value._
 
 ## Technologies Used
 
